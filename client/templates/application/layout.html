@@ -1,0 +1,31 @@
+<template name="layout">
+	<div class="container">
+		<header class="navbar navbar-default" role="navigation"> 
+			
+				<a class="navbar-brand" href="/">BOOKS SHARE AREA</a>
+					<ul class="nav navbar-nav navbar-right">
+						{{> loginButtons align="right"}}
+					</ul>
+			
+		</header>
+		<header class="navbar navbar-default" role="navigation">
+			<div class="navbar-header">
+				<ul class="nav navbar-nav">
+					<li><a id="layout" href="{{pathFor 'gestUser'}}">Gestion User</a></li>
+					<li><a class="dropdown-toggle" data-toggle="dropdown">Recherche</a>
+						<ul class="dropdown-menu">
+							<li><a id ="layout" href="{{pathFor 'location'}}">Locations</a></li>
+							<li><a id ="layout" href="{{pathFor 'prets'}}">Prêts</a></li>
+							<li><a id ="layout" href="{{pathFor 'bibilotheque'}}">Bibilothèques</a></li>
+						</ul>
+					</li><!--location et prete, bibilotheque-->
+					<li><a id="layout" href="{{pathFor 'gestUser'}}">Inventaire</a></li>
+					<li><a id="layout" href="{{pathFor 'gestUser'}}">Lieu Idéal</a></li>
+				</ul>
+			</div>
+		</header>
+		<div id="main">
+			{{> postsList}}
+		</div>
+    </div>
+</template>
